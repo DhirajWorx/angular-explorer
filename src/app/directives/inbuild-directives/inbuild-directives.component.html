@@ -1,0 +1,62 @@
+<h1 style="color:seagreen">
+  Build-in Directive
+</h1>
+<hr />
+<h2>*ngIf</h2>
+<button (click)="iShow = !iShow">{{ iShow ? 'Hide' : 'Show' }}</button>
+<p>{{ iShow }}</p>
+<div *ngIf="iShow">
+  <p>
+    <b><em>*ngIf</em></b> ..... structural directive control visibility
+    (include/exclude in DOM) by above button
+  </p>
+</div>
+<div [hidden]="!iShow">
+  <p>
+    <b><em>[hidden]</em></b> ..... internal property control visibility (always
+    in DOM) by above button
+  </p>
+</div>
+
+<hr />
+<h2>*ngFor</h2>
+<p>
+  <b><em>*ngFor</em></b> ..... structural directive
+</p>
+<p>
+  Also used here is <b><em>ngStyle</em></b> and <b><em>ngClass</em></b>
+</p>
+<p
+  *ngFor="let c of countries; let i = index"
+  [ngStyle]="{ color: (i + 1) % 2 === 1 ? 'grey' : 'black' }"
+  [ngClass]="{ 'odd-row': (i + 1) % 2 === 1 }"
+>
+  {{ '# ' + (i + 1) + ' - ' + c }}
+</p>
+
+<hr />
+<h2>ngSwitch</h2>
+<button
+  (click)="currentNumber = 1"
+  [ngStyle]="{ color: currentNumber === 1 ? 'red' : 'grey' }"
+>
+  1
+</button>
+<button
+  (click)="currentNumber = 5"
+  [ngStyle]="{ color: currentNumber === 5 ? 'red' : 'grey' }"
+>
+  5
+</button>
+<button
+  (click)="currentNumber = 10"
+  [ngStyle]="{ color: currentNumber === 10 ? 'red' : 'grey' }"
+>
+  10
+</button>
+<div [ngSwitch]="currentNumber">
+  <div *ngSwitchCase="1">O N E</div>
+  <div *ngSwitchCase="5">F I V E</div>
+  <div *ngSwitchCase="10">T E N</div>
+  <div *ngSwitchDefault>Z E R O</div>
+</div>

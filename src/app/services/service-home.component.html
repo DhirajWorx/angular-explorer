@@ -1,0 +1,33 @@
+<h1 style="color:seagreen">
+  Services
+</h1>
+<em>
+  <h5>
+    Example of Cross Component Communication using Services.
+  </h5>
+  <h6>
+    Component 1 and 2 can communicate via Service class EventService. Both
+    Service it to evoke event and both subscribe to this event.
+  </h6>
+</em>
+
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <ae-yellow-serv [ID]="1"></ae-yellow-serv>
+    </div>
+    <div class="col-6">
+      <ae-yellow-serv [ID]="2"></ae-yellow-serv>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-3">
+      <ae-yellow-serv [ID]="3"></ae-yellow-serv>
+    </div>
+    <div class="col-3">
+    </div>
+    <div class="col-3">
+      <ae-yellow-serv [ID]="4"></ae-yellow-serv>
+    </div>
+  </div>
+</div>

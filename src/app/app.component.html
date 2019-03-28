@@ -1,1 +1,38 @@
-<h1>ANGULAR EXPLORER</h1>
+<!-- <h1>ANGULAR EXPLORER</h1> -->
+
+<!-- <ae-directive-home></ae-directive-home> -->
+<!-- <a [routerLink]="['/inbuild-directives']">Inbuild Directives</a>
+<a [routerLink]="['/custom-directives']">Custom Directives</a>
+<a [routerLink]="['/services']">Services</a>
+<router-outlet></router-outlet>
+-->
+
+<!-- <span
+  class="glyphicon glyphicon-refresh glyphicon-spin spinner"
+  *ngIf="loading"
+></span> -->
+
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-3">
+      <nav class="navbar navbar-default">
+        <!-- <a class="navbar-brand">{{ title }}</a> -->
+        <ul class="nav navbar-nav">
+          <li routerLinkActive="active">
+            <a [routerLink]="['/inbuild-directives']">Directives - Inbuild</a>
+          </li>
+          <li routerLinkActive="active">
+            <a [routerLink]="['/custom-directives']">Directives - Custom</a>
+          </li>
+          <li routerLinkActive="active">
+            <a [routerLink]="['/services']">Services</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="col-9">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</div>

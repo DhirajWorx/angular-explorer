@@ -1,0 +1,41 @@
+
+<h1 style="color:seagreen">
+Custom Directive
+</h1>
+
+<hr />
+<h2 style="color:sienna">
+  <em>Custom Attribute Directives</em>
+</h2>
+<p aeHighlight><b>Highlight</b> - set element background with fixed color</p>
+
+<p aeHighlightHover>
+  <b>HighlightHover</b> - set element background with fixed color on Mouse over
+</p>
+
+<p aeRenderer2Highlight>
+  <b>Renderer2Highlight</b> - Renderer based Highlight directive.<br />This is
+  one of the recomended way to modify DOM. <br />
+  Dont directly modify DOM directly in classes (here...above directives)
+</p>
+<p aeHostBasedHighlight>
+  <b>Host Based Highlight</b>
+  <br />
+  <b><em>@HostBinding</em></b> and <b><em>@HostListener</em></b> based Highlight
+  directive. <br />This is one of the recomended way to modify DOM.
+  <br />
+  Also this directive takes <b><em>Input Value</em></b>
+</p>
+
+<h2 style="color:sienna">
+  <em>Custom Structural Directives</em>
+</h2>
+
+<div style="background: linen">
+  <b>aeIf</b>
+  <span> - </span>
+  <button class="btn" (click)="showHide = !showHide">Toggle</button>
+  <p *aeIf="showHide">
+    This is custom ngIf - aeIf... custom structural directive
+  </p>
+</div>
