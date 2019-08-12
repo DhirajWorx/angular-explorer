@@ -1,6 +1,5 @@
-
 <h1 style="color:seagreen">
-Custom Directive
+  Custom Directive
 </h1>
 
 <hr />
@@ -16,9 +15,9 @@ Custom Directive
 <p aeRenderer2Highlight>
   <b>Renderer2Highlight</b> - Renderer based Highlight directive.<br />This is
   one of the recomended way to modify DOM. <br />
-  Dont directly modify DOM directly in classes (here...above directives)
+  Dont directly modify DOM in classes (here...above directives)
 </p>
-<p aeHostBasedHighlight>
+<p aeHostBasedHighlight="blue">
   <b>Host Based Highlight</b>
   <br />
   <b><em>@HostBinding</em></b> and <b><em>@HostListener</em></b> based Highlight
@@ -36,6 +35,6 @@ Custom Directive
   <span> - </span>
   <button class="btn" (click)="showHide = !showHide">Toggle</button>
   <p *aeIf="showHide">
-    This is custom ngIf - aeIf... custom structural directive
+    Custom ngIf - aeIf... custom structural directive
   </p>
 </div>

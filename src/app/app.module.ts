@@ -14,6 +14,8 @@ import { HostBasedHighlightDirective } from './directives/custom-directives/host
 import { AeIfDirective } from './directives/custom-directives/ae-if.directive';
 import { ServiceHomeComponent } from './services/service-home.component';
 import { YellowServComponent } from './services/components/yellow-serv.component';
+import { PipeHomeComponent } from './pipes/pipe-home.component';
+import { SimpleFilterPipe } from './pipes/custom-pipes/simple-filter.pipe';
 
 @NgModule({
   declarations: [
@@ -27,7 +29,9 @@ import { YellowServComponent } from './services/components/yellow-serv.component
     HostBasedHighlightDirective,
     AeIfDirective,
     ServiceHomeComponent,
-    YellowServComponent
+    YellowServComponent,
+    PipeHomeComponent,
+    SimpleFilterPipe
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],

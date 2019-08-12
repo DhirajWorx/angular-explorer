@@ -15,7 +15,6 @@ export class HostBasedHighlightDirective implements OnInit {
   constructor() {}
 
   ngOnInit(): void {
-    this.inputColor = 'pink';
     console.log('Init::' + this.inputColor);
   }
 
